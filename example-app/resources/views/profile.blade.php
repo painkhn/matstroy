@@ -17,6 +17,11 @@
                 <div class="email">
                     <p>{{ Auth::user()->email }}</p>
                 </div>
+                @if (Auth::user()->is_admin == 1)
+                    <div class="admin mb-8">
+                        <a href="{{ route('admin') }}">Админка</a>
+                    </div>
+                @endif
             </div>
         </div>
         <div class="purchases mb-20">
