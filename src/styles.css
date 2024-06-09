@@ -1,0 +1,70 @@
+:root {
+    --color-grey: #575757;
+    --color-yellow: #FFFA78;
+    --color-grey-primary: #9B9B9B;
+    --color-light-grey: #7d7d7d;
+}
+
+.max-w-1685px {
+    max-width: 1685px;
+}
+
+.min-h-195px {
+    min-height: 195px;
+}
+
+input {
+    outline: none;
+}
+
+.color-root-grey {
+    color: var(--color-grey);
+}
+
+.color-root-grey-light {
+    color: var(--color-light-grey);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.h-main {
+    min-height: calc( 100vh - 700px );
+}
+
+.text-small {
+    font-size: 10px;
+}
+
+.h-480px {
+    height: 480px;
+}
+
+.min-h-550 {
+    min-height: 550px;
+}
+
+.max-w-1725px {
+    max-width: 1725px;
+}
+
+.w-45pr {
+    width: 45%;
+}
+
+.bg-grey-primary {
+    background-color: var(--color-grey-primary);
+}
+
+.color-root-yellow {
+    color: var(--color-yellow);
+}
+
+.bg-root-yellow {
+    background-color: var(--color-yellow);
+}
+
+.h-505 {
+    height: 505px;
+}
