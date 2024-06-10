@@ -53,6 +53,10 @@ a:hover {
     width: 45%;
 }
 
+.bg-root-grey-light {
+    background-color: var(--color-light-grey);
+}
+
 .bg-grey-primary {
     background-color: var(--color-grey-primary);
 }
@@ -67,4 +71,17 @@ a:hover {
 
 .h-505 {
     height: 505px;
+}
+
+input[type=submit],
+input[type=button],
+button {
+    cursor: pointer;
+    transition: all .2s;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+button:hover {
+    text-decoration: underline;
 }
