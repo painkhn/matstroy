@@ -85,3 +85,7 @@ input[type=button]:hover,
 button:hover {
     text-decoration: underline;
 }
+
+.min-h-448px {
+    min-height: 448px;
+}
