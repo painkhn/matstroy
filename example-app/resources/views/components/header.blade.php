@@ -23,7 +23,8 @@
         </div>
         <nav class="nav w-3/5 flex justify-end">
             <div class="cart">
-                <a href="#!" title="Корзина" class="flex items-center color-root-grey font-black text-xl">
+                <a href="{{ route('Basket') }}" title="Корзина"
+                    class="flex items-center color-root-grey font-black text-xl">
                     <img src="{{ asset('img/cart-icon.svg') }}" alt="" class="mr-5">
                     Ваша корзина
                 </a>

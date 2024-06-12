@@ -24,54 +24,27 @@
                 <h2>Мои покупки:</h2>
             </div>
             <ul class="grid grid-cols-5">
-                <li>
-                    <div class="max-w-72 w-full h-480px py-5">
-                        <div class="max-w-44 w-full mx-auto my-0">
-                            <img src="{{ asset('img/fame-1.png') }}" alt="" class="mx-auto my-0 max-h-52 mb-10">
-                            <div class="title text-xs font-black color-root-grey-light mb-4">
-                                <h3>Штукатурка гипсовая КРЕПС 30 кг</h3>
-                            </div>
-                            <div class="price color-root-grey-light font-black mb-8">
-                                <div class="count w-6 h-4 bg-yellow-300 text-small text-center rounded mb-3">
-                                    <p>шт</p>
+                @foreach ($buys as $item)
+                    @foreach ($item->products as $product)
+                        <li>
+                            <div class="max-w-72 w-full h-480px py-5">
+                                <div class="max-w-44 w-full mx-auto my-0">
+                                    <img src="{{ asset($product->photo) }}" alt=""
+                                        class="mx-auto my-0 max-h-52 mb-10">
+                                    <div class="title text-xs font-black color-root-grey-light mb-4">
+                                        <h3>{{ $product->name }}</h3>
+                                    </div>
+                                    <div class="price color-root-grey-light font-black mb-8">
+                                        <div class="count w-6 h-4 bg-yellow-300 text-small text-center rounded mb-3">
+                                            <p>шт</p>
+                                        </div>
+                                        <p><span>{{ $product->price }}</span> ₽</p>
+                                    </div>
                                 </div>
-                                <p><span>684</span> ₽</p>
                             </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="max-w-72 w-full h-480px py-5">
-                        <div class="max-w-44 w-full mx-auto my-0">
-                            <img src="{{ asset('img/fame-1.png') }}" alt="" class="mx-auto my-0 max-h-52 mb-10">
-                            <div class="title text-xs font-black color-root-grey-light mb-4">
-                                <h3>Штукатурка гипсовая КРЕПС 30 кг</h3>
-                            </div>
-                            <div class="price color-root-grey-light font-black mb-8">
-                                <div class="count w-6 h-4 bg-root-yellow text-small text-center rounded mb-3">
-                                    <p>шт</p>
-                                </div>
-                                <p><span>684</span> ₽</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="max-w-72 w-full h-480px py-5">
-                        <div class="max-w-44 w-full mx-auto my-0">
-                            <img src="{{ asset('img/fame-1.png') }}" alt="" class="mx-auto my-0 max-h-52 mb-10">
-                            <div class="title text-xs font-black color-root-grey-light mb-4">
-                                <h3>Штукатурка гипсовая КРЕПС 30 кг</h3>
-                            </div>
-                            <div class="price color-root-grey-light font-black mb-8">
-                                <div class="count w-6 h-4 bg-root-yellow text-small text-center rounded mb-3">
-                                    <p>шт</p>
-                                </div>
-                                <p><span>684</span> ₽</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                        </li>
+                    @endforeach
+                @endforeach
             </ul>
         </div>
     </div>

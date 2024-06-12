@@ -16,7 +16,12 @@ class Product extends Model
         'photo',
     ];
 
-    public function basket() 
+    public function basket()
+    {
+        return $this->belongsTo(Basket::class);
+    }
+
+    public function buy()
     {
         return $this->belongsTo(Basket::class);
     }

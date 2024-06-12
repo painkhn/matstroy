@@ -15,5 +15,7 @@ Route::post('/admin/product/new', [AdminController::class, 'new_product'])->name
 Route::post('/search', [HomeController::class, 'search'])->name('Search');  
 Route::get('/basket/{tovar_id}', [BasketController::class, 'add_basket'])->name('AddBasket')->middleware(['auth']);
 Route::get('/basket', [BasketController::class, 'basket_open'])->name('Basket')->middleware(['auth']);
+Route::get('/buy/{tovar_id}', [BasketController::class, 'buy_product'])->name('BuyProduct')->middleware(['auth']);
+
 
 require __DIR__.'/auth.php';
