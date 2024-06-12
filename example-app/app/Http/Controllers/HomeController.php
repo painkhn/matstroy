@@ -23,4 +23,9 @@ class HomeController extends Controller
         $product = Product::orderBy('created_at', 'DESC')->get();
         return view('catalog', ['products' => $product]);
     }
+    public function product_open($tovar_id)
+    {
+        $product = Product::where('id', $tovar_id)->first();
+        return view('product', ['product'=>$product]);
+    }
 }

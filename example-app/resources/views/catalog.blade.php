@@ -11,24 +11,26 @@
         <ul class="grid grid-cols-5">
             @foreach ($products as $item)
                 <li>
-                    <div class="max-w-72 w-full h-480px py-5">
-                        <div class="max-w-44 w-full mx-auto my-0">
-                            <img src="{{ asset($item->photo) }}" alt="" class="mx-auto my-0 max-h-52 mb-10">
-                            <div class="title text-xs font-black color-root-grey-light mb-4">
-                                <h3>{{ $item->name }}</h3>
-                            </div>
-                            <div class="price color-root-grey-light font-black mb-8">
-                                <div class="count w-6 h-4 bg-yellow-300 text-small text-center rounded mb-3">
-                                    <p>шт</p>
+                    <a href="{{ route('Product', ['tovar_id' => $item->id]) }}">
+                        <div class="max-w-72 w-full h-480px py-5">
+                            <div class="max-w-44 w-full mx-auto my-0">
+                                <img src="{{ asset($item->photo) }}" alt="" class="mx-auto my-0 max-h-52 mb-10">
+                                <div class="title text-xs font-black color-root-grey-light mb-4">
+                                    <h3>{{ $item->name }}</h3>
                                 </div>
-                                <p><span>{{ $item->price }}</span> ₽</p>
-                            </div>
-                            <div class="submit">
-                                <input type="submit" value="Добавить в корзину"
-                                    class="w-full h-12 bg-yellow-300 color-root-grey-light text-xs font-black rounded">
+                                <div class="price color-root-grey-light font-black mb-8">
+                                    <div class="count w-6 h-4 bg-yellow-300 text-small text-center rounded mb-3">
+                                        <p>шт</p>
+                                    </div>
+                                    <p><span>{{ $item->price }}</span> ₽</p>
+                                </div>
+                                <div class="submit">
+                                    <input type="submit" value="Добавить в корзину"
+                                        class="w-full h-12 bg-yellow-300 color-root-grey-light text-xs font-black rounded">
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
             @endforeach
         </ul>

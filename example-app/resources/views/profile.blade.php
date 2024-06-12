@@ -27,21 +27,23 @@
                 @foreach ($buys as $item)
                     @foreach ($item->products as $product)
                         <li>
-                            <div class="max-w-72 w-full h-480px py-5">
-                                <div class="max-w-44 w-full mx-auto my-0">
-                                    <img src="{{ asset($product->photo) }}" alt=""
-                                        class="mx-auto my-0 max-h-52 mb-10">
-                                    <div class="title text-xs font-black color-root-grey-light mb-4">
-                                        <h3>{{ $product->name }}</h3>
-                                    </div>
-                                    <div class="price color-root-grey-light font-black mb-8">
-                                        <div class="count w-6 h-4 bg-yellow-300 text-small text-center rounded mb-3">
-                                            <p>шт</p>
+                            <a href="{{ route('Product', ['tovar_id' => $product->id]) }}">
+                                <div class="max-w-72 w-full h-480px py-5">
+                                    <div class="max-w-44 w-full mx-auto my-0">
+                                        <img src="{{ asset($product->photo) }}" alt=""
+                                            class="mx-auto my-0 max-h-52 mb-10">
+                                        <div class="title text-xs font-black color-root-grey-light mb-4">
+                                            <h3>{{ $product->name }}</h3>
                                         </div>
-                                        <p><span>{{ $product->price }}</span> ₽</p>
+                                        <div class="price color-root-grey-light font-black mb-8">
+                                            <div class="count w-6 h-4 bg-yellow-300 text-small text-center rounded mb-3">
+                                                <p>шт</p>
+                                            </div>
+                                            <p><span>{{ $product->price }}</span> ₽</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </li>
                     @endforeach
                 @endforeach
