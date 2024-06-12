@@ -29,7 +29,8 @@
                 </a>
             </div>
             <div class="header_profile ml-16">
-                <a href="#!" title="Личный кабинет" class="flex items-center color-root-grey font-black text-xl">
+                <a href="{{ route('profile') }}" title="Личный кабинет"
+                    class="flex items-center color-root-grey font-black text-xl">
                     <img src="{{ asset('img/user-icon.svg') }}" alt="" class="mr-5 w-8">
                     Личный кабинет
                 </a>

@@ -20,6 +20,7 @@ class HomeController extends Controller
     }
     public function catalog()
     {
-            
+        $product = Product::orderBy('created_at', 'DESC')->get();
+        return view('catalog', ['products' => $product]);
     }
 }
