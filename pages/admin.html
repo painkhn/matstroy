@@ -47,35 +47,39 @@
 
     <main class="main h-main py-10">
         <div class="max-w-screen-2xl w-full h-auto mx-auto my-0 mb-20">
-            <div class="flex justify-between pt-20 mb-40">
-                <div class="product-main_info">
-                    <img src="../src/img/makita.png" alt="Product Image">
-                    <div class="title text-center color-root-grey-light font-black text-4xl">
-                        <h3>Перфоратор <span>Makita</span></h3>
-                    </div>
-                </div>
-                <div class="price_info max-w-md w-full">
-                    <div class="title text-center color-root-grey-light font-black text-2xl mb-10">
-                        <h3>Цена: <span>10 000 </span>₽</h3>
-                    </div>
-                    <div class="submit">
-                        <input type="submit" value="Добавить в корзину" class="w-full h-16 bg-root-yellow color-root-grey-light text-2xl font-black rounded">
-                    </div>
-                </div>
+            <div class="title text-center color-root-grey font-black text-2xl mb-10">
+                <h2>ПАНЕЛЬ АДМИНИСТРАТОРА</h2>
             </div>
-            <div class="desc mb-40">
-                <div class="title color-root-grey-light font-black text-4xl mb-20">
-                    <h2>Описание</h2>
-                </div>
-                <div class="desc-cont color-root-grey-light font-black text-2xl">
-                    <p>
-                        Перфоратор Makita — ручной ударный инструмент для профессионалов и домашних мастеров. Мощность инструмента в 780 Вт определяет энергию удара, подходящую для бытовых нужд. Перфоратор воздействует на обрабатываемую поверхность с силой 2,7 Дж. Работает от сети. Кабель длиной 4 метра обеспечивает комфортную работу.
-                        Диаметр сверления отверстий: в бетоне — 24 мм (65мм при сверлении коронкой), в металле — 13 мм, в древесине — 32 мм.
-                        Скорость — 1100 об/мин. С увеличением числа оборотов растет и производительность работы.
-                        Модель оснащена патроном SDS-Plus. Это распространенный тип хвостовика с 4 пазами (2 направляющих и 2 фиксирующих).
-                    </p>
-                </div>
+            <div class="title text-center color-root-grey font-black text-xl mb-20">
+                <h3>Добавление товара</h3>
             </div>
+            <form class="w-full">
+                <div class="flex justify-between">
+                    <div class="input w-5/12">
+                        <div class="grid grid-cols-1 grid-rows-3 min-h-448px max-w-md">
+                            <input type="text" class="border-b-2 border-black h-10 px-6 w-full" placeholder="Название">
+                            <input type="text" class="border-b-2 border-black h-10 px-6 w-full" placeholder="Цена">
+                            <input type="text" class="border-b-2 border-black h-10 px-6 w-full" placeholder="Описание">
+                        </div>
+                    </div>
+                    <div class="add_image w-5/12">
+                        <div class="title text-center color-root-grey font-black text-lg mb-5">
+                            <h4>Добавить фотографию товара</h4>
+                        </div>
+                        <div class="input">
+                            <label class="block py-10 rounded-xl overflow-hidden bg-root-yellow cursor-pointer hover:shadow-xl hover:shadow-gray-300 transition-all">
+                                <input type="file" class="hidden">
+                                <div class="flex flex-col justify-center items-center h-full color-root-grey font-black uppercase text-sm">
+                                    ВЫБЕРИТЕ ФАЙЛ
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit text-center">
+                    <input type="submit" value="Добавить в корзину" class="max-w-md w-full py-7 bg-root-yellow color-root-grey-light text-xl font-black rounded">
+                </div>
+            </form>
         </div>
     </main>
 
