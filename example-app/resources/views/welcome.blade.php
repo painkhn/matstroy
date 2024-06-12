@@ -22,8 +22,10 @@
                                     <p><span>{{ $item->price }}</span> ₽</p>
                                 </div>
                                 <div class="submit">
-                                    <input type="submit" value="Добавить в корзину"
-                                        class="w-full h-12 bg-yellow-300 color-root-grey-light text-xs font-black rounded">
+                                    <a href="{{ route('AddBasket', ['tovar_id' => $item->id]) }}">
+                                        <input type="submit" value="Добавить в корзину"
+                                            class="w-full h-12 bg-yellow-300 color-root-grey-light text-xs font-black rounded">
+                                    </a>
                                 </div>
                             </div>
                         </div>

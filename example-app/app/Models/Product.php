@@ -15,4 +15,9 @@ class Product extends Model
         'price',
         'photo',
     ];
+
+    public function basket() 
+    {
+        return $this->belongsTo(Basket::class);
+    }
 }

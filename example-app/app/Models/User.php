@@ -22,6 +22,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function basket()
+    {
+        return $this->hasOne(Basket::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
