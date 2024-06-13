@@ -13,4 +13,4 @@
 - Создать хранилище `php artisan storage:link`
 - Мигрировать таблицы `php artisan migrate`
 - Запустить приложения `npm run dev` и `php artisan serve`
-- Данные от админа Логин: `root@mail.ru` Пароль: `123456789`
+- Данные от админа Логин: `root@gmail.com` Пароль: `123456789`
