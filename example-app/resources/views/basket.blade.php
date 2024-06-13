@@ -25,6 +25,10 @@
                                     <div class="submit">
                                         <a href="{{ route('BuyProduct', ['tovar_id' => $product->id]) }}">
                                             <input type="submit" value="Купить"
+                                                class="w-full h-12 bg-yellow-300 color-root-grey-light text-xs font-black rounded mb-5">
+                                        </a>
+                                        <a href="{{ route('DelBasket', ['bakset_id' => $basket->id]) }}">
+                                            <input type="submit" value="Удалить из корзины"
                                                 class="w-full h-12 bg-yellow-300 color-root-grey-light text-xs font-black rounded">
                                         </a>
                                     </div>

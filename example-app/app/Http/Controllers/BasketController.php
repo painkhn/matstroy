@@ -36,4 +36,9 @@ class BasketController extends Controller
         Buy::create($data);
         return redirect()->back();
     }
+    public function del_basket($bakset_id)
+    {
+        Basket::where('id', $bakset_id)->delete();
+        return redirect()->back();
+    }
 }
