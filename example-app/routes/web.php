@@ -18,5 +18,6 @@ Route::get('/basket/delete/{bakset_id}', [BasketController::class, 'del_basket']
 Route::get('/basket', [BasketController::class, 'basket_open'])->name('Basket')->middleware(['auth']);
 Route::get('/product/{tovar_id}', [HomeController::class, 'product_open'])->name('Product');
 Route::get('/buy/{tovar_id}', [BasketController::class, 'buy_product'])->name('BuyProduct')->middleware(['auth']);
+Route::get('/api/new-users', [AdminController::class, 'getNewUsers']);
 
 require __DIR__.'/auth.php';

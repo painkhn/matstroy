@@ -14,8 +14,14 @@
                 <div class="name mb-8">
                     <p>{{ Auth::user()->name }}</p>
                 </div>
-                <div class="email">
+                <div class="email mb-8">
                     <p>{{ Auth::user()->email }}</p>
+                </div>
+                <div class="mb-8">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-logout">Выйти</button>
+                    </form>
                 </div>
                 @if (Auth::user()->is_admin == 1)
                     <div class="admin">

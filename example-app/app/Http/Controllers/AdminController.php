@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product; 
+use App\Models\{ Product, User };
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -35,5 +36,23 @@ class AdminController extends Controller
         Product::create($data); // Сохраняем в бд
 
         return redirect()->back(); // Возвращаем назад
+    }
+    public function getNewUsers()
+    {
+        $startDate = Carbon::now()->subDays(7);
+
+        $users = User::where('created_at', '>=', $startDate)
+                     ->orderBy('created_at')
+                     ->get()
+                     ->groupBy(function($date) {
+                         return Carbon::parse($date->created_at)->format('Y-m-d');
+                     });
+
+        $userCounts = [];
+        foreach ($users as $date => $userGroup) {
+            $userCounts[$date] = count($userGroup);
+        }
+
+        return response()->json($userCounts);
     }
 }

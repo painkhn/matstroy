@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('content')
-    <div class="w-full min-h-screen flex items-center justify-center">
+    <div class="w-full min-h-screen flex items-center justify-center my-10">
         <div class="main_cont w-full">
             <div class="title text-center color-root-grey font-black text-4xl mb-20">
                 <h1>Вход в аккаунт</h1>
@@ -39,6 +39,9 @@
                                 class="w-full h-24 bg-root-yellow color-root-grey-light text-2xl font-black rounded">
                         </div>
                     </div>
+                    <button class="w-full bg-root-yellow h-24 color-root-grey-light text-2xl font-black rounded mb-10">
+                        Войти по Яндекс ID
+                    </button>
                 </form>
                 <div class="link text-center">
                     <a href="/" class="text-white text-2xl font-black">На главную</a>
