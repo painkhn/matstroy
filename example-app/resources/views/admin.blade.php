@@ -48,7 +48,7 @@
                 <div class="flex justify-between">
                     <div>
                         <h3 class="font-bold text-2xl mb-2">
-                            Всего пользователей: 52
+                            Всего пользователей: {{ $users }}
                         </h3>
                         <p class="text-base font-normal text-gray-500 dark:text-gray-400">Пользоваталей за неделю</p>
                     </div>
@@ -58,9 +58,12 @@
                 </div>
             </div>
             <!-- Отчёт о новых пользователях в excel -->
-            <button class="max-w-md w-full py-7 bg-root-yellow color-root-grey-light text-xl font-black rounded mx-auto block">
-                Скачать отчёт
-            </button>
+            <a href="{{ route('exel') }}">
+                <button
+                    class="max-w-md w-full py-7 bg-root-yellow color-root-grey-light text-xl font-black rounded mx-auto block">
+                    Скачать отчёт
+                </button>
+            </a>
         </div>
     </div>
 
@@ -115,13 +118,11 @@
                                 top: 0
                             },
                         },
-                        series: [
-                            {
-                                name: "New users",
-                                data: counts,
-                                color: "#1A56DB",
-                            },
-                        ],
+                        series: [{
+                            name: "New users",
+                            data: counts,
+                            color: "#1A56DB",
+                        }, ],
                         xaxis: {
                             categories: dates,
                             labels: {

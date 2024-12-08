@@ -39,10 +39,12 @@
                                 class="w-full h-24 bg-root-yellow color-root-grey-light text-2xl font-black rounded">
                         </div>
                     </div>
+                </form>
+                <a href="{{ route('yandex') }}">
                     <button class="w-full bg-root-yellow h-24 color-root-grey-light text-2xl font-black rounded mb-10">
                         Войти по Яндекс ID
                     </button>
-                </form>
+                </a>
                 <div class="link text-center">
                     <a href="/" class="text-white text-2xl font-black">На главную</a>
                 </div>

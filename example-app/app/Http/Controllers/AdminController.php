@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\{ Product, User };
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Carbon\Carbon;
 
 class AdminController extends Controller
@@ -11,8 +13,16 @@ class AdminController extends Controller
     public function index()
     // Открытие админки
     {
-        return view('admin');    
+        return view('admin', [
+            'users' => User::count()
+        ]);
     }
+
+    public function exel()
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
+    }
+
     public function new_product(Request $request)
     // Добавление нового продукта
     {
@@ -35,8 +45,9 @@ class AdminController extends Controller
         ]; // Собираем всю информацию о товаре
         Product::create($data); // Сохраняем в бд
 
-        return redirect()->back(); // Возвращаем назад
+        return redirect()->back();
     }
+
     public function getNewUsers()
     {
         $startDate = Carbon::now()->subDays(7);
